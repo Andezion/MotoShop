@@ -7,6 +7,21 @@
 * [Technologies](#technologies)
 * [Features](#features)
 * [Setup](#setup)
+
+---
+
+## General info
+Motoshop is an educational web application store for managing motorcycles and spare parts.  
+It is implemented on **Spring Boot** using **PostgreSQL** as a database.  
+The project demonstrates working with REST API, Spring Data JPA, and interacting with clients and transactions.
+
+---
+
+## Demonstration
+The application runs at `http://localhost:8082`.  
+After launch, the REST API is available for working with entities (motorcycles, spare parts, customers, transactions).  
+Later, you can connect the frontend or test requests via Postman/Swagger.
+
 ```
  :: Spring Boot ::                (v3.2.3)
 
@@ -66,4 +81,54 @@
 2025-09-15T10:28:59.134+02:00  INFO 18384 --- [shop_lera] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
 2025-09-15T10:28:59.154+02:00  INFO 18384 --- [shop_lera] [  restartedMain] pl.dmcs.shop.ShopApplication             : Started ShopApplication in 17.458 seconds (process running for 23.73)
 
+```
+
+---
+
+## Technologies
+- Java 21  
+- Spring Boot 3.2.3  
+- Spring Data JPA  
+- Spring Web  
+- PostgreSQL  
+- HikariCP (connection pool)  
+- Lombok  
+- Tomcat (embedded)  
+- Maven
+
+---
+
+## Features
+- Storage of motorcycle, parts and customer information.  
+- Transaction management (purchase of motorcycles and parts).  
+- REST API for CRUD transactions.  
+- DevTools support for hot-reload development.  
+- Connection to PostgreSQL using JPA/Hibernate.  
+
+---
+
+## Setup
+1. Clone the repository:
+```bash
+git clone https://github.com/username/motoshop.git
+cd motoshop
+```
+
+2. Configure the PostgreSQL database (example application.properties):
+```
+spring.datasource.url=jdbc:postgresql://localhost:5432/motoshop
+spring.datasource.username=postgres
+spring.datasource.password=yourpassword
+spring.jpa.hibernate.ddl-auto=update
+```
+
+3. Get it up and running:
+```
+mvn clean install
+mvn spring-boot:run
+```
+
+4. Jump in the browser:
+```
+http://localhost:8082
 ```
