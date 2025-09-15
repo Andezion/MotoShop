@@ -1,5 +1,5 @@
 # Motoshop
-
+A small test project of a motorbike shop management system
 
 ## Content
 * [General info](#general-info)
